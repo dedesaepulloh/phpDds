@@ -52,6 +52,4 @@
     $dengandash = implode("-", $pecahan);
     echo "$denganspasi<br>";
     echo "$dengandash";
-
-    echo "<br";
 ?>
