@@ -34,6 +34,42 @@
         //     1200 : Rp. 1.200
         // 3. Buat fungsi tanggal indo 
         //     2019/10/01 : Selasa, 01 Oktober 2019
+
+        // Penyelesaian Latihan
+
+        // Fungsi terbilang
+        function terbilang($nilai){
+            $huruf = array("","Satu","Dua","Tiga","Empat","Lima","Enam","Tujuh","Delapan","Sembilan","Sepuluh","Sebelas");
+            if($nilai <12){
+                $hasil = $huruf[$nilai];
+            }
+            // Belum beres
+            return $hasil;
+        }
+
+
+        // Fungsi curency
+        function format_rupiah($jumlah){
+            $hasil = "Rp.".number_format($jumlah,0);
+            return $hasil;
+        }
+
+        // Fungsi tanggal indo
+        function tanggal_indo($tanggal){
+            $harihuruf = array("Ahad", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+            $hariangka = date("w", strtotime($tanggal));
+            $hariindo = $harihuruf[$hariangka];
+
+            return $hariindo;
+        }
+
+        // Pemanggilan
+        echo terbilang(9);
+        echo "<br>";
+        echo format_rupiah(90000);
+        echo "<br>";
+        echo tanggal_indo("2019-10-01");
+
     ?>
 <!doctype html>
 <html lang="en">
