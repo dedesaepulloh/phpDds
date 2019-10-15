@@ -1,0 +1,41 @@
+                                            QUERY
+---------------------------------------------------------------------------------------
+
+1. QUERY MENYMPAN DATA
+    BENTUK UMUM : 
+    INSERT INTO nama_tabel (nama_field) VALUES (data)
+    CONTOH : 
+    INSERT INTO t_barang (id_kategori, nama_barang, satuan, harga_beli, harga_jual, keterangan, foto) VALUES ('1','Gamis Cantik', 'pcs', '75000', '150000', 'Hanya ada satu warna yaitu hitam', 'gamis.jpg')
+
+2. QUERY MENAMPILKAN DATA
+    BENTUK UMUM : 
+    SELECT * FROM nama_tabel WHERE
+    CONTOH : 
+    - SELECT * FROM t_barang
+    - SELECT nama_barang, harga_jual FROM t_barang
+    - SELECT * FROM t_barang WHERE id_barang='2'
+    - SELECT * FROM t_barang WHERE harga_jual >= 50000
+    - SELECT * FROM t_barang WHERE id_kategori='1' OR id_kategori='2'
+    - SELECT * FROM t_barang WHERE id_kategori='1' AND satuan='pcs'
+    - SELECT * FROM t_barang WHERE nama_barang like '%mis%'
+    - SELECT * FROM t_barang ORDER BY nama_barang ASC
+    - SELECT * FROM t_barang ORDER BY harga_jual DESC
+    - SELECT *,(harga_jual - harga_beli) AS laba FROM t_barang
+    - SELECT COUNT(*) AS jumlahbarang FROM t_barang
+    - SELECT * FROM t_barang inner join t_kategori ON t_barang.id_kategori = t_kategori.id_kategori
+    - SELECT * FROM t_barang LIMIT 2
+    - SELECT * FROM t_barang ORDER BY harga_jual DESC LIMIT 2
+
+
+3. QUERY MEMPERBAHARUI DATA
+    BENTUK UMUM : 
+    UPDATE nama_tabel SET nama_field='data' WHERE
+    CONTOH : 
+    UPDATE t_barang SET harga_jual='1000000' WHERE id_barang='6'
+
+4. QUERY MENGHAPUS DATA
+    BENTUK UMUM : 
+    DELETE FROM nama_tabel WHERE
+    CONTOH : 
+    DELETE FROM t_barang WHERE id_barang='7'
+---------------------------------------------------------------------------------------
