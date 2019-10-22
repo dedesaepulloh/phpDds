@@ -9,7 +9,7 @@
 
 2. QUERY MENAMPILKAN DATA
     BENTUK UMUM : 
-    SELECT * FROM nama_tabel WHERE
+    SELECT * FROM nama_tabel WHERE field='key'
     CONTOH : 
     - SELECT * FROM t_barang
     - SELECT nama_barang, harga_jual FROM t_barang
@@ -29,13 +29,13 @@
 
 3. QUERY MEMPERBAHARUI DATA
     BENTUK UMUM : 
-    UPDATE nama_tabel SET nama_field='data' WHERE
+    UPDATE nama_tabel SET nama_field='data' WHERE field='key'
     CONTOH : 
     UPDATE t_barang SET harga_jual='1000000' WHERE id_barang='6'
 
 4. QUERY MENGHAPUS DATA
     BENTUK UMUM : 
-    DELETE FROM nama_tabel WHERE
+    DELETE FROM nama_tabel WHERE field='key'
     CONTOH : 
     DELETE FROM t_barang WHERE id_barang='7'
 ---------------------------------------------------------------------------------------
