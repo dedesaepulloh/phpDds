@@ -17,6 +17,9 @@
             <th>Harga Beli</th>
             <th>Harga Jual</th>
             <th>Stok</th>
+            
+            <!-- Nambahin Kolom action -->
+            <th>Action</th>
         </tr>
 
         <?php 
@@ -33,6 +36,11 @@
             <td><?php echo "$data[harga_beli]"; ?></td>
             <td><?php echo "$data[harga_jual]"; ?></td>
             <td><?php echo "$data[stok]"; ?></td>
+            <!-- Nambahin Kolom Edit & Hapus -->
+            <td>
+                <a href="editBarang.php?id_barang=<?php echo "$data[id_barang]"; ?>">Edit</a>
+                <a href="hapusBarang.php?id_barang=<?php echo "$data[id_barang]"; ?>">Hapus</a>
+            </td>
         </tr>
         <?php }?>
     </table>
