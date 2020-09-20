@@ -26,6 +26,6 @@
 
         echo "<script>alert('Berhasil diupload');window.location='tampil_upload.php'</script>";
     }else{
-        echo "<script>alert('Gagal diupload');window.location='form_upload.php'</script>";
+        // echo "<script>alert('Gagal diupload');window.location='form_upload.php'</script>";
     }
 ?>
